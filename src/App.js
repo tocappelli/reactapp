@@ -1,16 +1,13 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navbar from './componentes/NavBar/Navbar';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          la conchca de tu madreeeeeeeeeeeeeeeeee
-        </p>
-        
-      </header>
+     <Navbar/>
+     <ItemListContainer saludo={"VOLVELO A COMPRAR"} />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+h1{
+  font-family: 'IBM Plex Mono', monospace;
+}
+.fontButton button{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  
+}
+.logo{
+  max-width: 150px;
+}
