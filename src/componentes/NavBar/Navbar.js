@@ -13,7 +13,7 @@ const Navbar = () => {
       <button type="button" className="btn ">ABOUT US</button>
       <button type="button" className="btn ">PRODUCTOS</button>
       </div>
-      <div className ="d-flex container-fluid justify-content-end fontButton">
+      <div className ="d-flex container-fluid justify-content-end">
       <CartWidget />
       </div>
    </nav>

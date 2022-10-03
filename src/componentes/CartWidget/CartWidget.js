@@ -5,7 +5,7 @@ const CartWidget= ()=> {
   return (
      <div>
       <img className='cart' src={cart} alt= "cart" />
-      5
+      <span className='cart'>5</span> 
      </div> 
 
 

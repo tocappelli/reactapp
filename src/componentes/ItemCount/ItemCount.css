@@ -1,0 +1,12 @@
+.Counter{
+  font-size: 30px;
+}
+.count{
+  font-size: 25px;
+  border-color: black;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.span{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 35px;
+}
