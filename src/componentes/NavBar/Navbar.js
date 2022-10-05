@@ -4,17 +4,16 @@ import CartWidget from "../CartWidget/CartWidget"
 
 const Navbar = () => {
    return (
-   <nav className="navbar navbar-expand-lg   ">
-    <div>
+   <nav className="navbar navbar-expand-lg justify-content-center d-flex ">
+    
+    <div className =" container-fluid  fontButton">
       <img className="logo" src={logo} alt="logo" />
-    </div>
-      <div className ="d-flex container-fluid justify-content-center fontButton">
       <button type="button" className="btn ">HOME</button>
       <button type="button" className="btn ">ABOUT US</button>
       <button type="button" className="btn ">PRODUCTOS</button>
-      </div>
-      <div className ="d-flex container-fluid justify-content-end">
-      <CartWidget />
+    </div>
+      <div className ="d-flex container-fluid justify-content-end text-end">
+        <CartWidget />
       </div>
    </nav>
   

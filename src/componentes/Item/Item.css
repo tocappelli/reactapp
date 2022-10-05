@@ -1,0 +1,10 @@
+.cardStyle{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'IBM Plex Mono', monospace;
+    color:black;
+  }
+.cardName{
+  font-size: 30px;
+}  

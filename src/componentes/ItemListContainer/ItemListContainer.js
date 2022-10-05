@@ -1,6 +1,7 @@
 import "./ItemListContainer.css";
 import { useState,useEffect } from "react";
 import { getProduct } from "../../asyncMock";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = ({saludo}) => {
   const [products, setProducts] = useState([])
@@ -24,9 +25,9 @@ const ItemListContainer = ({saludo}) => {
  }
   return( 
     <div>
-     <h1>{saludo}</h1>
-     {products.map(prod => <li key={prod.id} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"25px"}}>{prod.name}</li>)}
-   </div>
+     <h1>Listado de Productos</h1>
+    <ItemList products={products}/>
+   </div> 
 
    
 

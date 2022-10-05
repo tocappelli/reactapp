@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
+import Itemcount from './componentes/ItemCount/ItemCount';
 import Navbar from './componentes/NavBar/Navbar';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import Itemcount from './componentes/ItemCount/ItemCount';
+
 
 
 
@@ -15,9 +16,9 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App container">
      <Navbar/>
-     <ItemListContainer saludo={"Listado de productos"} />
+     <ItemListContainer />
      <Itemcount onAdd={handleOnAdded} />
      
     </div>
