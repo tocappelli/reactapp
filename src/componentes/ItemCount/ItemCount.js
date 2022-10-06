@@ -21,7 +21,7 @@ const stock = 5
 
   return (
    <div className="Counter">
-    <button disabled={count <=1} onClick={decrease} type="button" className="btn btn-light m-3 span ">-</button>
+    <button disabled={count <=0} onClick={decrease} type="button" className="btn btn-light m-3 span ">-</button>
     <span className="span">{count}</span>
     <button disabled={count >= stock} onClick={increase} type="button" className="btn btn-light m-3 span ">+</button>
       <div className="handleOnAdd">

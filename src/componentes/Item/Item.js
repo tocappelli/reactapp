@@ -1,5 +1,6 @@
 import "./Item.css"
 
+
 const Item = ({img,name,category,price})=> {
   return (
     
@@ -10,13 +11,10 @@ const Item = ({img,name,category,price})=> {
           <h5 className="card-title cardName">{name}</h5>
           <p className="card-text">{category}</p>
           <p className="card-text">${price}</p>
+          
        </div>
      </div>
    </div>
-   
-
-   
-
   )
 }
 

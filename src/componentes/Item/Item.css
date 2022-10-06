@@ -4,7 +4,10 @@
     overflow: hidden;
     font-family: 'IBM Plex Mono', monospace;
     color:black;
+    border-radius: 25px;
+    font-size: 23px;
+    
   }
 .cardName{
   font-size: 30px;
-}  
+}
