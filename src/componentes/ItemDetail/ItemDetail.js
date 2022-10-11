@@ -3,17 +3,17 @@ import "./ItemDetail.css"
 
 
 
- const ItemDetail = ({id,stock,img,name,category,price,description})=> {
+ const ItemDetail = ({id,stock,img,name,price,description})=> {
   const handleOnAdd = (quantity) => {
     const productToAdd = {
        id, name, price, quantity
    }
-   console.log(productToAdd())
+   console.log(productToAdd(name))
 }
-
+  
   return (
-    <div className="card text-center bg-ligth animate__animated animate__fadeInUp mt-5">
-    <div>
+    <div className="card text-center bg-ligth animate__animated animate__fadeInUp mt-5  ">
+    <div >
       <img src={img} alt={name} className="card-img-top imgDetail" />
     </div>
     <div className="card-body ">

@@ -5,30 +5,31 @@ import React, {useState} from "react";
 
 
 
-const Itemcount =({onAdd})=>{
-  const [count, setCount] = useState(0);
+
+
+const Itemcount =({stock = 0, initial = 0, onAdd})=>{
+  const [quantity, setQuantity] = useState(initial);
   
-  const decrease = ()=> {
-     setCount (count -1);
-  }
   const increase = ()=> {
-    setCount (count +1);
- }
+    if (quantity < stock){
+      setQuantity(quantity + 1);
+    }
+  }
+  const decrease = ()=> {
+    if (quantity > 1){
+      setQuantity(quantity - 1);
+    }
+  }
 
- 
 
-const stock = 5
-
-
-
-  return (
+ return (
    <div className="Counter">
     <h2 className="count">Cantidad</h2>
-    <button disabled={count <=0} onClick={decrease} type="button" className="btn btn-light m-3 span  ">-</button>
-    <span className="span">{count}</span>
-    <button disabled={count >= stock} onClick={increase} type="button" className="btn btn-light m-3 span ">+</button>
+    <button  onClick={decrease} type="button" className="btn btn-light m-3 span  ">-</button>
+    <span className="span">{quantity}</span>
+    <button onClick={increase} type="button" className="btn btn-light m-3 span ">+</button>
       <div className="handleOnAdd">
-      <button type="button" className="btn btn-light count" onClick={onAdd} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"25px"}} >Agregar al carrito</button>
+      <button type="button" className="btn btn-light count" onClick={()=> onAdd(quantity)} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"25px"}} >Agregar al carrito</button>
       </div>
       
    </div>

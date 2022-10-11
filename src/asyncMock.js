@@ -5,7 +5,7 @@ const products= [{
   category: 'Juegos',
   img: "/Images/nintendo64.jpg",
   stock: 10,
-  description: 'Descripcion game boy ',
+  description: 'Nintendo 64 es la cuarta videoconsola de sobremesa producida por Nintendo, desarrollada para suceder a la Super Nintendo. Fue la primera consola concebida para dar el salto del 2D al 3D. Compitió en el mercado de la quinta generación con Saturn de Sega y PlayStation (consola) de Sony, esta última creada a partir de diseños descartados previamente por Nintendo.',
 },
 {
   id: "2",
@@ -14,8 +14,9 @@ const products= [{
   category: 'Juegos',
   img: '/Images/familygame.jpg',
   stock: 10,
-  description: 'Descripcion family game ',
+  description: 'Family Game es el nombre genérico que recibieron en Latinoamérica las versiones clónicas de la consola de videojuegos Famicom japonesa de 8 bits.​ No existe información oficial acerca de ninguna licencia por parte de Nintendo para utilizar sus títulos, aunque estas consolas cuentan prácticamente con todo el catálogo de juegos de la original. Especialmente popular en Argentina, llegó a acaparar el 95% de ventas de videoconsolas del país a principios de los años 90.  ',
 },
+/*
 {
   id: "3",
   name: 'Sega',
@@ -25,6 +26,7 @@ const products= [{
   stock: 10,
   description: 'Descripcion sega game',
 },
+*/
 {
   id: "4",
   name: 'Tamagochi',
@@ -32,7 +34,7 @@ const products= [{
   category: 'Juegos',
   img: '/Images/tamagochi.jpg',
   stock: '5',
-  description: 'Descripcion Tamagochi',  
+  description: 'Un Tamagotchi es una mascota virtual creada por Aki Maita y comercializada por Bandai el 23 de noviembre de 1996 en Japón. El Tamagotchi es un aparato electrónico con la forma y el tamaño de un huevo, que tiene una pantalla en blanco y negro pixelada, donde se puede ver una mascota virtual.',  
 
 },
 { id: "5",
@@ -41,7 +43,7 @@ const products= [{
   category: 'Juegos',
   img: '/Images/gameboy.jfif',
   stock: '5',
-  description: 'Descripcion Gameboy'},
+  description: 'Game Boy (en japonés: ゲームボーイ Gēmu Bōi) es una videoconsola portátil desarrollada y comercializada por Nintendo, lanzada por primera vez en Japón y América del Norte en 1989, y en Europa un año después​. Perteneció a la línea de consolas Game Boy, siendo esta la primera de la serie.'},
 
 { id: "6",
   name: 'Play Station 1',
@@ -49,7 +51,7 @@ const products= [{
   category: 'Juegos',
   img: '/Images/play1.jpg',
   stock: '5',
-  description: 'Descripcion ps1'},
+  description: 'PlayStation es la primera videoconsola de Sony, y la primera de dicha compañía en ser diseñada por Ken Kutaragi, y es una videoconsola de sobremesa de 32 bits lanzada por Sony Computer Entertainment el 3 de diciembre de 1994 en Japón. '},
 
 { id: "7",
   name: '"Menem"',
@@ -147,8 +149,32 @@ const products= [{
   category: 'Famosos',
   img: '/Images/cabezas.jpg',
   stock: '5',
-  description: 'José Luis Cabezas fue un reportero gráfico y fotógrafo argentino.​​​Su homicidio se convirtió en el mayor emblema de la lucha de la prensa argentina en pos de la libertad de expresión.'}, 
+  description: 'José Luis Cabezas fue un reportero gráfico y fotógrafo argentino.​​​Su homicidio se convirtió en el mayor emblema de la lucha de la prensa argentina en pos de la libertad de expresión.'},
+  
+  { id: "19",
+  name: 'El Oso Arturo',
+  price: 10,
+  category: 'Famosos',
+  img: '/Images/arturo.jpg',
+  stock: '5',
+  description: 'El Oso Arturo es un personaje televisivo nacido en 1997 durante el programa argentino VideoMatch que el conductor Marcelo Tinelli tenía en el canal Telefé.'},
 
+  { id: "20",
+  name: 'Beavis and Butt-Head',
+  price: 15,
+  category: 'Dibujos',
+  img: '/Images/beavis.jpg',
+  stock: '5',
+  description: 'Beavis and Butt-Head es una serie de dibujos animados dirigida principalmente para jóvenes y adolescentes, emitida originalmente por la cadena de televisión MTV. La serie fue transmitida de 1993 a 1997, y tuvo un breve regreso en 2011.'},
+
+  { id: "21",
+  name: 'Las Tortugas Ninjas',
+  price: 1000,
+  category: 'Famosos',
+  img: '/Images/ninja.jpg',
+  stock: '5',
+  description: 'En el año de su lanzamiento Las tortugas ninja fue un film inmensamente exitoso, recaudando más de 135 millones de dólares solo en taquilla. Desde entonces la cinta fue el filme independiente más taquillero de todos los tiempos, hasta que The Blair Witch Project lo superó 9 años después.'},
+  
 ]
 
 export const getProductById = (id) => {
@@ -180,4 +206,5 @@ export const getProductByCategory = (categoryId) => {
     
   })
 }
+
 
