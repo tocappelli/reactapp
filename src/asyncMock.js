@@ -16,7 +16,7 @@ const products= [{
   stock: 10,
   description: 'Family Game es el nombre genérico que recibieron en Latinoamérica las versiones clónicas de la consola de videojuegos Famicom japonesa de 8 bits.​ No existe información oficial acerca de ninguna licencia por parte de Nintendo para utilizar sus títulos, aunque estas consolas cuentan prácticamente con todo el catálogo de juegos de la original. Especialmente popular en Argentina, llegó a acaparar el 95% de ventas de videoconsolas del país a principios de los años 90.  ',
 },
-/*
+
 {
   id: "3",
   name: 'Sega',
@@ -26,7 +26,7 @@ const products= [{
   stock: 10,
   description: 'Descripcion sega game',
 },
-*/
+
 {
   id: "4",
   name: 'Tamagochi',
@@ -174,6 +174,22 @@ const products= [{
   img: '/Images/ninja.jpg',
   stock: '5',
   description: 'En el año de su lanzamiento Las tortugas ninja fue un film inmensamente exitoso, recaudando más de 135 millones de dólares solo en taquilla. Desde entonces la cinta fue el filme independiente más taquillero de todos los tiempos, hasta que The Blair Witch Project lo superó 9 años después.'},
+
+  { id: "22",
+  name: 'Nike Mercurial Vapor',
+  price: 1000000,
+  category: 'Mundiales',
+  img: '/Images/nike.jpg',
+  stock: '5',
+  description: 'Primer modelo de Nike Mercurial Vapor fabricados especialmente para Ronaldo en 1998.'},
+  
+  { id: "23",
+  name: 'Hugo',
+  price: 10000,
+  category: 'Dibujos',
+  img: '/Images/hugo.jpg',
+  stock: '5',
+  description: '"Elegí, estoy segura de que perderás"'},
   
 ]
 
@@ -183,7 +199,7 @@ export const getProductById = (id) => {
           resolve(products.find(prod => {
               return prod.id === id
           }))
-      }, 500)
+      }, 1000)
   })
 }
 
@@ -193,7 +209,7 @@ export const getProducts = () => {
     setTimeout(()=>{
      resolve(products)
 
-    },1000)
+    },3000)
     
   })
 }
@@ -202,7 +218,7 @@ export const getProductByCategory = (categoryId) => {
     setTimeout(()=>{
      resolve(products.filter(prod => prod.category === categoryId))
 
-    },500)
+    },1000)
     
   })
 }

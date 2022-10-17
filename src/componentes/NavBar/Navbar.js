@@ -8,13 +8,13 @@ import { Link,NavLink } from "react-router-dom"
 
 const Navbar = () => {
    return (
-   <nav className="navbar justify-content-center d-flex">
-    <div className =" container-fluid fontButton">
+   <nav className="navbar justify-content-center d-flex  ">
+    <div className =" container-fluid fontButton ">
       <Link to="/">
       <img className="logo" src={logo} alt="logo" />
       </Link>
-      <Link to="/" className="btn fs-3">INICIO</Link>
-      <Link to="/about" className="btn fs-3">SOBRE LOS 90`</Link>
+      <Link to="/" className="btn fs-4 fw-semibold ">INICIO</Link>
+      <Link to="/about" className="btn fs-4 fw-semibold">SOBRE LOS 90`</Link>
       <NavLink to={"/category/Juegos"} className={({isActive})=> isActive ? "ActiveOption": "Option"}>Juegos</NavLink>
       <NavLink to={"/category/Famosos"} className={({isActive})=> isActive ? "ActiveOption": "Option"}>Famosos</NavLink>
       <NavLink to={"/category/Mundiales"} className={({isActive})=> isActive ? "ActiveOption": "Option"}>Mundiales</NavLink>

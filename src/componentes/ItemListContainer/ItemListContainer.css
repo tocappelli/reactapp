@@ -1,3 +1,7 @@
-h1{
+.titleFont{
   font-family: 'IBM Plex Mono', monospace;
+  font-size: 30px;
+}
+.loadStyles{
+  padding: 500px;
 }

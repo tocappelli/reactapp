@@ -16,7 +16,7 @@ const Item = ({id,img,name,category,price})=> {
            <Link className="btn btn-light" to={`/detail/${id}`}>Ver Detalle</Link>
           
           
-       </div>
+       </div> 
      </div>
    </div>
   )

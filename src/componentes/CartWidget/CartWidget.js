@@ -1,11 +1,23 @@
-import cart from '../../assets/img/cart.svg'
+import { useContext } from 'react'
+import cart from '../../assets/img/minecart.svg'
+import { CartContext } from '../../context/CartContext'
 import "./CartWidget.css"
 
+
+
 const CartWidget= ()=> {
+   const {getQuantity} = useContext(CartContext)
+
+   const quantity = getQuantity()
+
+
+
   return (
-     <div>
+     <div className='d-flex container'>
       <img className='cart' src={cart} alt= "cart" />
-      <span className='cart'>5</span> 
+      <div className='fs-4'>
+      {quantity}
+      </div>
      </div> 
 
 
