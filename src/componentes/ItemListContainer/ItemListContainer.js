@@ -1,10 +1,11 @@
 import "./ItemListContainer.css";
 import { useState,useEffect } from "react";
-import { getProducts, getProductByCategory} from "../../asyncMock";
+//import { getProducts, getProductByCategory} from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { Metronome } from '@uiball/loaders'
-
+import {getDocs,collection, query, where} from "firebase/firestore"
+import { db } from "../../service/firebase";
 
 
 
@@ -13,19 +14,42 @@ const ItemListContainer = () => {
   const [loading,setLoading] = useState(true)
   const {categoryId}= useParams()
   
-  
   useEffect(()=>{
-
-    const asyncFunction = categoryId ? getProductByCategory : getProducts
-
-    asyncFunction(categoryId).then(response=>{
-      console.log(response);
-      setProducts(response);
-    }).finally(()=>{
-      setLoading(false);
-    })
+    setLoading(true)
+  
+    const collectionRef = categoryId
+     ? query(collection(db,"productos"), where ("category", "==", categoryId))
+     : collection(db, "productos")
     
+    getDocs(collectionRef).then(response=>{
+      
+      const productsAdapted = response.docs.map(doc=> {
+        const data = doc.data()
+        console.log(data)
+        return {id: doc.id, ...data}
+      })
+
+      setProducts(productsAdapted);
+
+      
+    }).catch(error => {
+      console.log(error)
+      
+    }).finally(()=>{
+      setLoading(false);      
+    })
   },[categoryId])
+
+  //  const asyncFunction = categoryId ? getProductByCategory : getProducts
+//
+ //   asyncFunction(categoryId).then(response=>{
+ //     console.log(response);
+ //     setProducts(response);
+ //   }).finally(()=>{
+ //     setLoading(false);
+ //   })
+    
+  
  
 
  if(loading){

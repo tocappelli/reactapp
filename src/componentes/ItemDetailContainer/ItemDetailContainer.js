@@ -1,9 +1,11 @@
 import {useState,useEffect} from "react"
-import {getProductById} from "../../asyncMock"
+//import {getProductById} from "../../asyncMock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 import { Metronome } from '@uiball/loaders'
 import { useNavigate } from 'react-router-dom';
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../../service/firebase";
 
 
 
@@ -16,11 +18,20 @@ const ItemDetailContainer = ()=> {
   
 
   useEffect(()=>{
-    getProductById(productId).then(response=>{
-     setProduct(response);
+    const docRef = doc(db,"productos",productId)
+
+    getDoc(docRef).then(response =>{
+      const data = response.data()
+      const productAdapted = {id: response.id, ...data}
+      setProduct(productAdapted) 
     }).finally(()=>{
       setLoading(false);
-    })
+    }) 
+   // getProductById(productId).then(response=>{
+   //  setProduct(response);
+   // }).finally(()=>{
+   //   setLoading(false);
+   // })
     
   },[productId])
 
