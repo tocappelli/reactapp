@@ -3,12 +3,15 @@ import {getProductById} from "../../asyncMock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 import { Metronome } from '@uiball/loaders'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const ItemDetailContainer = ()=> {
   const [product,setProduct] = useState({})
   const [loading,setLoading] = useState(true)
   const {productId} = useParams()
+  const navigate = useNavigate();
   
   
 
@@ -34,7 +37,9 @@ const ItemDetailContainer = ()=> {
     
     return( 
       <div>
-        <ItemDetail {...product} /> 
+       
+        <ItemDetail {...product} />
+        <button className="btn btn-light count mt-5" onClick={() => navigate(-1)} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"18px"}} >Volver Atras</button> 
      </div> 
   
      

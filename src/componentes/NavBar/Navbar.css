@@ -5,19 +5,19 @@
   
 }
 .logo{
-  max-width: 150px;
+  max-width: 80px;
 }
 .ActiveOption {
   text-decoration: none;
   color: black;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 60px;
+  font-size: 30px;
 }
 .Option {
   text-decoration: none;
   color: black;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 25px;
+  font-size: 15px;
   display: flex;
   flex-direction: column-reverse;
   flex-wrap: nowrap;
