@@ -27,6 +27,7 @@ const countAdded = getProductQuantity(id)
 
 
 return (
+  <div className="container">
     <div className="card text-center bg-ligth animate__animated animate__fadeInUp   ">
     <div >
       <img src={img} alt={name} className="card-img-top imgDetail mt-5" />
@@ -39,9 +40,11 @@ return (
         
     </div>
     <div className="countStyles">
-    { !goToCart ? <Itemcount onAdd={handleOnAdd} stock={stock} initial={countAdded} /> : <Link className="btn btn-light count mt-5" to='/cart'>Ir al carrito</Link> }
+    { !goToCart ? <Itemcount onAdd={handleOnAdd} stock={stock} initial={countAdded} /> : <Link className="btn btn-light count mt-5" to='/cart' style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"18px", margin: "25px"}}>Ir al carrito</Link> }
+   
     </div>
     
+  </div>
   </div>
     
   )

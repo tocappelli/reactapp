@@ -25,7 +25,7 @@ const ItemListContainer = () => {
       
       const productsAdapted = response.docs.map(doc=> {
         const data = doc.data()
-        console.log(data)
+       
         return {id: doc.id, ...data}
       })
 
@@ -40,14 +40,7 @@ const ItemListContainer = () => {
     })
   },[categoryId])
 
-  //  const asyncFunction = categoryId ? getProductByCategory : getProducts
-//
- //   asyncFunction(categoryId).then(response=>{
- //     console.log(response);
- //     setProducts(response);
- //   }).finally(()=>{
- //     setLoading(false);
- //   })
+
     
   
  

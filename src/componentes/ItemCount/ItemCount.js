@@ -34,7 +34,7 @@ const Itemcount =({stock , initial = 1, onAdd})=>{
     <button onClick={increase} type="button" className="btn btn-light m-3 span ">+</button>
       
       <div className="handleOnAdd">
-      <button type="button" className="btn btn-light count" onClick={()=> onAdd(count)} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"20px"}} >Agregar al carrito</button> <hr />
+      <button type="button" className="btn btn-light count" onClick={()=> onAdd(count)} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"20px"}} >Agregar al carrito</button> 
       
       </div>
       

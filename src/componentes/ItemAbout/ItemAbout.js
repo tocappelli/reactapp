@@ -4,7 +4,7 @@ const ItemAbout =()=> {
   return(
   <div className="text-center row mt-5">
   <h1>SOBRE LOS 90`</h1>
-  <p className="text-center col-lg-12 mt-5">Los que crecieron en los ’90 hubo algunos símbolos infaltables de esta generación a la que se la conoce como “millennials” y han destacado por múltiples cosas.</p>
+  <p className="text-center col-lg-12 mt-5">Para los que crecieron en los ’90 hubo algunos símbolos infaltables de esta generación a la que se la conoce como “millennials” y han destacado por múltiples cosas.</p>
   <p className="text-center col-lg-12">Toda persona que haya vivido durante esos años recuerda aún la pasión por Titanic, se sabe de memoria la canción de El Príncipe de Bel Air y conoce de primera mano el furor que causaron las Spice Girls o los Backstreet Boys.</p>
   <p className="text-center col-lg-12 ">¿Quién no ha usado una lapicera para rebobinar un cassette? O, ¿quién no se acuerda de aquel sonido espantoso (y a la vez tan gratificante) que suponía conectarte a Internet? En definitiva, una época para recordar.</p>
   <h2 className="text-center col-lg-12 mt-5">#1 Grabar canciones de la radio en un cassette</h2>

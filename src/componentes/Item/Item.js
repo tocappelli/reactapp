@@ -6,7 +6,7 @@ const Item = ({id,img,name,category,price})=> {
   
   return (
     
-    <div className="d-flex d-inline-flex  cardStyle m-3 ">
+    <div className="d-flex d-inline-flex cardStyle m-3 ">
       <div className="card border" >
           <img src={img} className="card-img-top" style={{width: 300}}alt={name}/>
         <div className="card-body ">
@@ -19,6 +19,7 @@ const Item = ({id,img,name,category,price})=> {
        </div> 
      </div>
    </div>
+   
   )
   
 }

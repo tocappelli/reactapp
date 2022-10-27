@@ -17,9 +17,9 @@ const ItemCart = () => {
   return ( 
       <div className='container'>
           <h3>Carrito</h3>
-          {cart.map(prod=>(
-               <table className="table table-dark mt-5  ">
-                  <thead key="thead">
+          {cart.map(prod=>( 
+               <table className="table table-dark mt-5  " key={prod.id}>
+                  <thead>
                       <tr>
                         <th>Producto</th>
                         <th>Cantidad</th>
@@ -28,7 +28,7 @@ const ItemCart = () => {
                         <th>Eliminar</th>
                       </tr>
                  </thead>
-                    <tbody key="tbody">
+                    <tbody>
                       <tr>
                         <td>{prod.name}</td>
                         <td>{prod.count}</td>
@@ -38,14 +38,17 @@ const ItemCart = () => {
                       </tr>
                  </tbody>
              </table>
+                 
 
             ))
           }
        <div className='mt-5'>
             <h2>Precio Total: $ {total}</h2>
+            <button type="button" className="btn btn-light count mt-3" style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"20px"}} >Finalizar Compra</button>
           </div>
           <div className='mt-5'>
-          <button type="button" className="btn btn-light count" onClick={()=> clearCart()} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"20px"}} >Limpiar Carrito</button>
+          <button type="button" className="btn btn-light count" onClick={()=> clearCart()} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"15px"}} >Limpiar Carrito</button>
+          
           </div>
           
           <button className="btn btn-light count mt-5" onClick={() => navigate(-1)} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"18px"}}>Volver Atras</button>

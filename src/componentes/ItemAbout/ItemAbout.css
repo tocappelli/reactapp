@@ -1,9 +1,12 @@
+
 body{
   overflow-x: hidden;
+  padding: 15px;
 }
 
 p{
   font-size: 19px;
+  
   
 }
 h2{

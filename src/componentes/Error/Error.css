@@ -1,0 +1,8 @@
+.imgError{
+width: 1200px;
+}
+.textError{
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 40;
+  font-style: italic;
+}
