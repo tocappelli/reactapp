@@ -4,6 +4,7 @@ import React from 'react';
  import { useContext } from 'react';
  import "./ItemCart.css"
  import trash from "../../assets/img/trash-outline.svg"
+ import { Link } from 'react-router-dom';
 
 
 
@@ -12,13 +13,21 @@ const ItemCart = () => {
   const navigate = useNavigate();
   const {cart,removeItem, total,clearCart}= useContext(CartContext)
   
+  if (cart.length === 0) {
+    return( 
+       <div>
+       <h1 className='mt-5'>El carrito esta vacio</h1>
+       <Link className="btn btn-light m-5" to={'/'}> <h6 className='emptyCart'>Volver a la tienda</h6> </Link>
+       </div>
+    )
+   }  
  
 
   return ( 
       <div className='container'>
           <h3>Carrito</h3>
           {cart.map(prod=>( 
-               <table className="table table-dark mt-5  " key={prod.id}>
+               <table className="table table-dark mt-5" key={prod.id}>
                   <thead>
                       <tr>
                         <th>Producto</th>
@@ -44,7 +53,8 @@ const ItemCart = () => {
           }
        <div className='mt-5'>
             <h2>Precio Total: $ {total}</h2>
-            <button type="button" className="btn btn-light count mt-3" style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"20px"}} >Finalizar Compra</button>
+            <Link to='/checkout'><button type="button" className="btn btn-light count mt-3" style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"20px"}} >Continuar Compra</button></Link>
+            
           </div>
           <div className='mt-5'>
           <button type="button" className="btn btn-light count" onClick={()=> clearCart()} style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"15px"}} >Limpiar Carrito</button>

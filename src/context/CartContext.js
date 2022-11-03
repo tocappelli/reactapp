@@ -78,7 +78,7 @@ useEffect(()=>{
   
   
   
-  // funcion para multiplicar los cantidad de productos y el precio de c/u
+  
   
 
   

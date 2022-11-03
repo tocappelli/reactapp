@@ -1,13 +1,10 @@
-td{
-  font-family: 'IBM Plex Mono', monospace;
-}
-th{
+.btnOrden{
   font-family: 'IBM Plex Mono', monospace;
   font-size: 20px;
 }
-h3{
+h6{
   font-family: 'IBM Plex Mono', monospace;
 }
-.emptyCart {
+.label{
   font-family: 'IBM Plex Mono', monospace;
 }

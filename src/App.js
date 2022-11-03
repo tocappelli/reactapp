@@ -9,6 +9,7 @@ import Error from './componentes/Error/Error';
 import ItemFooter from './componentes/ItemFooter/ItemFooter';
 import CartProvider from './context/CartContext';
 import ItemCart from './componentes/ItemCart/ItemCart';
+import Checkout from './componentes/Checkout/Checkout';
 
 
 
@@ -33,6 +34,7 @@ function App() {
                  <Route path= "/detail/:productId" element = { <ItemDetailContainer/>}/> 
                  <Route path= "*" element={<Error/>}/>
                  <Route path="/cart" element={<ItemCart />} />
+                 <Route path='/checkout' element={<Checkout />} />
                </Routes>
            <ItemFooter />
          </BrowserRouter>
