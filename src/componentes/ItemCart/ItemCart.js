@@ -52,7 +52,7 @@ const ItemCart = () => {
             ))
           }
        <div className='mt-5'>
-            <h2>Precio Total: $ {total}</h2>
+            <h2>Precio total: $ {total}</h2>
             <Link to='/checkout'><button type="button" className="btn btn-light count mt-3" style={{fontFamily:"IMB Plex Mono,monospace", fontSize:"20px"}} >Continuar Compra</button></Link>
             
           </div>

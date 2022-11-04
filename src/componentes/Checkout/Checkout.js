@@ -11,7 +11,7 @@ import swal from "sweetalert";
 
 const Checkout = ()=>{
 
-  const { cart, total, totalQuantity, clearCart} = useContext(CartContext)
+  const { cart, total, totalQuantity, clearCart,getTotal} = useContext(CartContext)
 
   const [ name, setName] = useState('')
   const [ lastName, setLastName] = useState('')
@@ -53,8 +53,8 @@ const Checkout = ()=>{
         {
             const alert = () => {
                 swal({
-                    title: "Don anonimato, complete los datos.",
-                    text: `Es necesario completar los campos para enviar la orden.`,
+                    title: "Complete todos los campos.",
+                    text: `Es necesario  para enviar la orden.`,
                     icon: "warning"
                 })
             }
@@ -63,11 +63,6 @@ const Checkout = ()=>{
         }
     else {
     
-    
-
-
-
-
         const order = {
             comprador: {
                 nombre: name,
@@ -77,13 +72,13 @@ const Checkout = ()=>{
             },
             Productos: cart.map(product => ({ id: product.id, titulo: product.name, cantidad: product.count })),
 
-            total: total(cart)
+            Total: getTotal(cart)
+
+          }
 
 
 
 
-
-        }
 
 
         const batch = writeBatch(db)
@@ -172,9 +167,11 @@ const Checkout = ()=>{
     <div className="container mt-5">
        
         <div className="row">
+        <h5>Usted esta comprando:</h5>
         {cart.map(prod => {
                         return (
                             <div key={prod.id} className=" justify-content-center">
+                                 
                                 <h6>Producto: {prod.name}</h6>
                                 <h6>Cantidad:{prod.count}</h6>
                                 
@@ -204,7 +201,7 @@ const Checkout = ()=>{
         <label className="form-label label">Nombres</label>
         <input type="text" className="form-control btnOrden" placeholder="First name" aria-label="First name" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
-        <div class="col">
+        <div className="col">
         <label className="form-label label">Apellidos</label>
         <input type="text" className="form-control btnOrden" placeholder="Last name" aria-label="Last name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </div>
@@ -219,11 +216,11 @@ const Checkout = ()=>{
         <input type="email" className="form-control btnOrden" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" value={email1}  onChange={(e) => setEmail1(e.target.value)}/>
         </div>
        </div>
-       <div class="d-grid gap-2 mt-5 btnOrden">
+       <div className="d-grid gap-2 mt-5 btnOrden">
         Aclaraciones
        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" value={coments} onChange={(e) => setComents(e.target.value)}></textarea>
        </div>
-       <div class="d-grid gap-2 mt-5 btnOrden">
+       <div className="d-grid gap-2 mt-5 btnOrden">
 
       { email===email1 ? <button className="btn btn-secondary btnOrden" type="button"  onClick={generateOrder}>Generar Orden</button>: <button className="btn btn-secondary btnOrden" type="button"  onClick={eValidate} style={{background: 'red'}}>No coinciden los correos</button>}
       

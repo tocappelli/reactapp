@@ -8,9 +8,9 @@ export const CartContext = createContext({
 const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0)
-  const [total, setTotal]= useState(0)
+ const [total, setTotal]= useState(0)
   
- 
+
 useEffect(()=>{
   const getTotal = () => {
     let accu = 0
@@ -25,6 +25,8 @@ useEffect(()=>{
   setTotal(total)
 },[cart])
   
+
+
   
   
   // sincroniza la cantidad de productos en el cartWidget
@@ -97,11 +99,19 @@ const getProductQuantity = (id)=>{
   
 }
   
+const getTotal = () => {
+  let accu = 0
 
+  cart.forEach(prod => {
+      accu = prod.count * prod.price
+  })
+
+  return accu
+}
 
 
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart,totalQuantity,total,getProductQuantity}}>
+    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart,totalQuantity,getProductQuantity,getTotal,total}}>
       {children}
     </CartContext.Provider>
   );
