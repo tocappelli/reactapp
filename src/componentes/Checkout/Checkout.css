@@ -8,3 +8,9 @@ h6, h5{
 .label{
   font-family: 'IBM Plex Mono', monospace;
 }
+.container-class .title-class{
+  font-family: 'IBM Plex Mono', monospace;
+}
+.rojo{
+  color: red;
+}

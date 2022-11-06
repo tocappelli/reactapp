@@ -9,6 +9,7 @@ import swal from "sweetalert";
 
 
 
+
 const Checkout = ()=>{
 
   const { cart, total, totalQuantity, clearCart,getTotal} = useContext(CartContext)
@@ -54,8 +55,9 @@ const Checkout = ()=>{
             const alert = () => {
                 swal({
                     title: "Complete todos los campos.",
-                    text: `Es necesario  para enviar la orden.`,
-                    icon: "warning"
+                    text: ` Es necesario completar todos los campos para generar la orden`,
+                    icon: "warning",
+                    
                 })
             }
 
@@ -119,7 +121,7 @@ const Checkout = ()=>{
 
             const alert = () => {
               swal({
-                    title: "Orden Creada.",
+                    title: "Orden Creada con Exito",
                     text: `El id de su orden es: ${orderAdded.id}`,
                     icon: "success",
                      
@@ -141,7 +143,7 @@ const Checkout = ()=>{
         } else {
             const alert = () => {
               swal({
-                    title: "Sin Stock",
+                    title: "Disculpe, en este momento el producto se encuentra sin Stock",
 
                     icon: "warning"
                 })
